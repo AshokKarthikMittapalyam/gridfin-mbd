@@ -1,0 +1,21 @@
+# Solver and simulation outputs (large, regenerate from the model)
+*.odb
+*.lck
+*.res
+*.sta
+*.msg
+*.dat
+*.prt
+*.023
+
+# Videos are hosted externally (YouTube or LinkedIn)
+*.mp4
+*.avi
+
+# Python
+__pycache__/
+.venv/
+
+# OS
+Thumbs.db
+desktop.ini
