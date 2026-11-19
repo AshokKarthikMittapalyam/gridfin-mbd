@@ -47,22 +47,40 @@ The piston is driven out and back by a Data Points function.
 
 ![Fin rotation against piston stroke](simulation/plots/kinematic_fin_angle_vs_stroke.png)
 
-### Dynamic run (1.6 s, 1 ms output step)
+### Force-driven dynamic run (1.6 s, 1 ms output step)
 
-Dynamic analysis of the same mechanism with Ti-6Al-4V material applied. An angle probe
-and a centre-of-mass sensor on the fin record its response:
+A duplicate of the mechanism with the joint driver removed: the piston is moved by an
+applied force on the Prismatic.2 joint instead of a prescribed motion, so the fin motion
+follows from the force and the inertia of the Ti-6Al-4V parts. The force pushes the piston
+out and then pulls it back. An angle probe and a centre-of-mass sensor on the fin record
+its response:
 
 - Fin angle (YZ projection) goes from 89.9 to 58.8 degrees at 0.61 s and returns to 89.1 degrees at 1.6 s.
 - The fin centre of mass shifts by up to 344 mm in Z and 79 mm in Y during the swing.
 
 ![Dynamic fin response](simulation/plots/dynamic_fin_response.png)
 
+### Mass properties (Ti-6Al-4V, 4430 kg/m³)
+
+Volumes are from the CATIA measure; masses are volume × 4430 kg/m³.
+
+| Body | Volume (cm³) | Mass (kg) |
+|---|---|---|
+| Fin | 5053.7 | 22.39 |
+| Piston push link | 191.9 | 0.85 |
+| Piston | 99.3 | 0.44 |
+
+The exported [`mass_properties_measure.csv`](simulation/results/mass_properties_measure.csv)
+was taken before the material was assigned and uses the default density of 7770 kg/m³, so
+its mass column is not the Ti-6Al-4V value; its volumes, centres of gravity and principal
+axes are unaffected.
+
 ## Files
 
 | Path | Content |
 |---|---|
 | [`simulation/3dxml/flap_pitch_actuation_kinematic.3dxml`](simulation/3dxml/) | Assembly and mechanism, kinematic model |
-| [`simulation/3dxml/flap_pitch_actuation_dynamic.3dxml`](simulation/3dxml/) | Assembly with material and the dynamic run animation |
+| [`simulation/3dxml/flap_pitch_actuation_dynamic.3dxml`](simulation/3dxml/) | Assembly with Ti-6Al-4V and the force-driven run animation |
 | [`simulation/results/`](simulation/results/) | Sensor exports (CSV) from the 3DEXPERIENCE 2D plots, and the mass properties measure |
 | [`simulation/plots/`](simulation/plots/) | Plots and value summary generated from the CSVs |
 | [`scripts/`](scripts/) | Python post-processing |
@@ -85,7 +103,7 @@ solver, Python (matplotlib) for post-processing.
 ## Next steps
 
 - Gravity and joint reaction forces (piston force, hinge load) with a hand-calculation check.
-- Force-driven deployment with an end stop, for deployment time and impact load.
+- Compliant end stops in the force-driven run, for the stop impact load.
 - Aerodynamic hinge moment from the thesis CFD data.
 - Flexible link from an Abaqus modal reduction.
 
