@@ -51,9 +51,14 @@ The piston is driven out and back by a Data Points function.
 
 A duplicate of the mechanism with the joint driver removed: the piston is moved by an
 applied force on the Prismatic.2 joint instead of a prescribed motion, so the fin motion
-follows from the force and the inertia of the Ti-6Al-4V parts. The force pushes the piston
-out and then pulls it back. An angle probe and a centre-of-mass sensor on the fin record
-its response:
+follows from the force and the inertia of the Ti-6Al-4V parts.
+
+| Model input (assumed value) | On | Value |
+|---|---|---|
+| Actuator force, pushes the piston out, then reverses to pull it back | Prismatic.2, Translation Z | ±37.5 kN |
+| Viscous damper (flow restriction in the actuator) | Prismatic.2, Translation Z | 1.5 × 10⁵ N·s/m |
+
+An angle probe and a centre-of-mass sensor on the fin record its response:
 
 - Fin angle (YZ projection) goes from 89.9 to 58.8 degrees at 0.61 s and returns to 89.1 degrees at 1.6 s.
 - The fin centre of mass shifts by up to 344 mm in Z and 79 mm in Y during the swing.
