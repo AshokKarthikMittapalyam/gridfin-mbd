@@ -1,7 +1,7 @@
 # Design Brief: Grid Fin Deployment Mechanism
 
 > Original brief from the start of the project. The built model is a piston-driven
-> slider-crank on a full-scale fin; see the [project page](README.md) for what was simulated.
+> slider-crank on a full-scale fin; see the [project page](../README.md) for what was simulated.
 
 ## Objective
 
