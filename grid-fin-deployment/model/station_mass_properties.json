@@ -1,0 +1,17 @@
+{
+  "_note": "One fin station, design v2. Replace every value marked estimate with the CATIA mass properties. Units: kg, mm, kg*mm^2. Fin CG: x along the span from the hinge axis, c across the chord (fin body is c from -125 to 0). Cylinder CG: distance from the anchor pin along the piston axis. Rod CG: distance from the rod-eye pin back along the piston axis.",
+  "fin_mass": {"value": null, "source": "estimate from design_v2.fin_mass() when null"},
+  "fin_cg_x": {"value": null, "source": "estimate from design_v2.fin_cg_x() when null"},
+  "fin_cg_c": {"value": -62.5, "source": "estimate (mid-chord)"},
+  "fin_inertia_hinge": {"value": null, "source": "estimate from wall segments when null; inertia about the hinge pin axis"},
+  "cyl_mass": {"value": 5.3, "source": "estimate: steel barrel 60/48 x 478 plus caps and eye"},
+  "cyl_cg_from_anchor": {"value": 250.0, "source": "estimate"},
+  "rod_mass": {"value": 3.5, "source": "estimate: rod 30 x 440 plus piston and eye"},
+  "rod_cg_from_eye": {"value": 230.0, "source": "estimate"},
+  "supply_pressure_bar": {"value": 207.0, "source": "assumption (3000 psi)"},
+  "bore_mm": {"value": 48.0, "source": "assumption"},
+  "rod_d_mm": {"value": 30.0, "source": "design v2"},
+  "no_load_speed_m_s": {"value": 0.25, "source": "assumption: sets the flow-restriction damping of the actuator model"},
+  "end_stop_k_N_m": {"value": 5.0e7, "source": "assumption: cylinder end-of-stroke stop stiffness"},
+  "end_stop_c_Ns_m": {"value": 5.0e4, "source": "assumption"}
+}

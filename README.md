@@ -19,7 +19,7 @@ MultiBody Dynamics Engineer roles (first target: Dassault Systèmes, IPS team).
 
 | Folder | Project | Brief |
 |---|---|---|
-| `grid-fin-deployment/` | Spring-driven deployment and latching of folding grid fins on a missile body | [Design brief](grid-fin-deployment/DESIGN_BRIEF.md) |
+| `grid-fin-deployment/` | Piston-driven pitch actuation of a full-scale hexagonal grid fin (slider-crank, one station) | [Project page and results](grid-fin-deployment/README.md) |
 | `quadcopter-payload-deployment/` | Servo-actuated payload release and landing gear dynamics of a rescue quadcopter | [Design brief](quadcopter-payload-deployment/DESIGN_BRIEF.md) |
 
 Each project folder follows the same layout as work progresses:
@@ -35,8 +35,8 @@ Each project folder follows the same layout as work progresses:
 | # | Milestone | Grid fin | Quadcopter |
 |---|---|---|---|
 | 1 | Design brief and parameter table frozen | | |
-| 2 | CAD geometry and mass properties | | |
-| 3 | Rigid-body kinematic model running | | |
+| 2 | CAD geometry and mass properties | Done | |
+| 3 | Rigid-body kinematic model running | Done | |
 | 4 | Force elements and contact added | | |
 | 5 | Flexible body from Abaqus integrated | | |
 | 6 | Parameter study complete | | |

@@ -1,5 +1,8 @@
 # Design Brief: Grid Fin Deployment Mechanism
 
+> Original brief from the start of the project. The built model is a piston-driven
+> slider-crank on a full-scale fin; see the [project page](README.md) for what was simulated.
+
 ## Objective
 
 Simulate the deployment of four folding hexagonal grid fins on a missile body, from the

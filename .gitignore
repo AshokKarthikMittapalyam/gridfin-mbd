@@ -12,6 +12,20 @@
 *.mp4
 *.avi
 
+# Local agent context (holds company environment settings, not for publishing)
+AGENTS.md
+.cursor/
+
+# Local helper scripts (contain local machine paths)
+.agent-scripts/
+
+# Hand-calculation reference for the superseded pivoting-cylinder concept
+grid-fin-deployment/results/reference/
+
+# Raw solver logs carry local machine paths
+*.spck
+Solver*.output/
+
 # Python
 __pycache__/
 .venv/
