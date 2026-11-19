@@ -1,13 +1,8 @@
-# Multibody Dynamics Portfolio
 
-Two multibody dynamics (MBD) simulation projects built on the 3DEXPERIENCE platform
-(CATIA for geometry, SIMPACK-based multibody simulation, Abaqus for flexible bodies),
-published as a public portfolio link on the resume of Mittapalyam Ashok Karthik for
-MultiBody Dynamics Engineer roles (first target: Dassault Systèmes, IPS team).
 
 ## Main objectives
 
-1. Show end-to-end MBD skills on aerospace and UAV mechanisms: kinematics, joints,
+1. explore end-to-end MBD skills on aerospace and UAV mechanisms: kinematics, joints,
    nonlinear force elements, contact, flexible bodies, parameter studies and result
    validation.
 2. Connect each project to earlier work, so it tells a single story in interviews:
